@@ -1,0 +1,41 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Android Studioprofiler
+*.hprof
+
+# Misc
+*.lock
+.classpath
+.project
+.settings
+
+# built apks
+*.apk
+*.aab
+
+# fascilitate local development
+/app/google-services.json
+
+# Built outputs for root project
+/dist
+/out
+
+# Ignore gradle output files
+.gradle/
+build/
+
+# local properties file
+local.properties

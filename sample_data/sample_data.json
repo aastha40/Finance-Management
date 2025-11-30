@@ -1,0 +1,39 @@
+{
+  "accounts": [
+    {
+      "id": "acc_1",
+      "name": "Chase Bank",
+      "type": "Bank Account",
+      "currency": "USD",
+      "balance": 5000.00,
+      "createdAt": "2024-01-01T10:00:00Z"
+    },
+    {
+      "id": "acc_2",
+      "name": "Cash",
+      "type": "Cash Account",
+      "currency": "USD",
+      "balance": 250.00,
+      "createdAt": "2024-01-01T10:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_1",
+      "name": "Salary",
+      "type": "income",
+      "iconName": "ic_salary",
+      "colorHex": "#4CAF50"
+    },
+    {
+      "id": "cat_2",
+      "name": "Groceries",
+      "type": "expense",
+      "iconName": "ic_groceries",
+      "colorHex": "#FF9800"
+    }
+  ],
+  "transactions": [],
+  "budgets": [],
+  "recurringRules": []
+}
