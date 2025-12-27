@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="apple_white">#F5F5F7</color>
+    <color name="apple_black">#1D1D1F</color>
+    <color name="apple_blue">#0071E3</color>
+    <color name="apple_gray">#86868B</color>
+    <color name="apple_card_bg">#FFFFFF</color>
+    <color name="apple_divider">#D2D2D7</color>
+    
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

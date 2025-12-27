@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.financemanagement.R;
 import com.example.financemanagement.model.Account;
 
+import java.text.NumberFormat;
 import java.util.List;
+import java.util.Locale;
 
 public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountViewHolder> {
 
@@ -24,30 +26,35 @@ public class AccountAdapter extends RecyclerView.Adapter<AccountAdapter.AccountV
     @NonNull
     @Override
     public AccountViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_2, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_account, parent, false);
         return new AccountViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull AccountViewHolder holder, int position) {
         Account account = accounts.get(position);
-        holder.text1.setText(account.getName());
-        holder.text2.setText(String.valueOf(account.getBalance()));
+        holder.name.setText(account.getName());
+        holder.type.setText(account.getType() != null ? account.getType() : "Account");
+        
+        NumberFormat format = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
+        holder.balance.setText(format.format(account.getBalance()));
     }
 
     @Override
     public int getItemCount() {
-        return accounts.size();
+        return accounts != null ? accounts.size() : 0;
     }
 
     static class AccountViewHolder extends RecyclerView.ViewHolder {
-        TextView text1;
-        TextView text2;
+        TextView name;
+        TextView type;
+        TextView balance;
 
         public AccountViewHolder(@NonNull View itemView) {
             super(itemView);
-            text1 = itemView.findViewById(android.R.id.text1);
-            text2 = itemView.findViewById(android.R.id.text2);
+            name = itemView.findViewById(R.id.account_name);
+            type = itemView.findViewById(R.id.account_type);
+            balance = itemView.findViewById(R.id.account_balance);
         }
     }
 
